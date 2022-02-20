@@ -7,6 +7,7 @@ import vueImage from "./images/vue.png";
 import reactImage from "./images/react.png";
 import tsImage from "./images/typescript.png";
 import blank from "./images/blank.png";
+import ScoreBoard from "./components/ScoreBoard";
 
 const width = 8;
 const candyColors = [
@@ -243,6 +244,7 @@ const App = () => {
           />
         ))}
       </div>
+      <ScoreBoard score={scoreDisplay} />
     </div>
   );
 };
