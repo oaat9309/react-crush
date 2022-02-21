@@ -8,6 +8,7 @@ import reactImage from "./images/react.png";
 import tsImage from "./images/typescript.png";
 import blank from "./images/blank.png";
 import ScoreBoard from "./components/ScoreBoard";
+import Navbar from "./components/Navbar";
 
 const width = 8;
 const candyColors = [
@@ -221,6 +222,8 @@ const App = () => {
 
   return (
     <div className="app">
+      <Navbar />
+      <ScoreBoard score={scoreDisplay} />
       <div className="game">
         {currentColorArrangement.map((candyColor, index) => (
           <img
@@ -244,7 +247,6 @@ const App = () => {
           />
         ))}
       </div>
-      <ScoreBoard score={scoreDisplay} />
     </div>
   );
 };
